@@ -1,6 +1,6 @@
 import java.util.Collections;
 import java.util.Scanner;
-import java.util.Stack;
+import java.util.LinkedList;
 
 /**
  * This program reads a list of Integer numbers from user input and saves them
@@ -17,7 +17,7 @@ public class Data_StructureLL {
      */
     public static void main(String[] args) {
         // Create a Stack to store the integers
-        Stack<Integer> numbersStack = new Stack<>();
+        LinkedList<Integer> numbersStack = new LinkedList<>();
 
         // Create a Scanner object to take input from the user
         Scanner scanner = new Scanner(System.in);
@@ -32,10 +32,10 @@ public class Data_StructureLL {
             int number = scanner.nextInt();
 
             // Add the number to the LinkedList while keeping it sorted
-            addNumberInOrder(numbersStack, number);
+            addNumberInOrder(numbersList, number);
 
             // Print the sorted list after each input
-            System.out.println("Sorted stack: " + numbersStack);
+            System.out.println("Sorted stack: " + numbersList);
         }
 
         // Close the scanner
@@ -57,6 +57,6 @@ public class Data_StructureLL {
         stack.push(number);
 
         // Sort the stack to maintain ascending order
-        Collections.sort(stack);
+        Collections.sort(list);
     }
 }
